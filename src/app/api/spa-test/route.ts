@@ -1,3 +1,3 @@
 export const GET = () => {
-    return new Response(JSON.stringify({ message: 'Hello World' }))
-}
+  return new Response(JSON.stringify({ message: "Hello World" }));
+};
