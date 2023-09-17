@@ -1,9 +1,19 @@
-"use client";
+export function generateStaticParams() {
+  return [
+    {
+      id: "foo",
+    },
+    {
+      id: "bar",
+    },
+    {
+      id: "baz",
+    },
+  ];
+}
 
-import { useParams } from "next/navigation";
-
-export default function Page() {
-  const { id } = useParams();
+export default function Page({ params }: { params: { id: string } }) {
+  const { id } = params;
   return (
     <main>
       <h1>Bar</h1>
